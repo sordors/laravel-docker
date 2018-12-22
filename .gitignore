@@ -1,0 +1,13 @@
+.DS_Store
+/nginx/log
+/supervisor/log
+# local env files
+.env
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
