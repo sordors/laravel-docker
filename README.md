@@ -49,6 +49,9 @@
 * 修改.env文件
 
 ```
+    # 项目名称
+    APP_NAME=app
+    
     # 修改项目路径,该路径为虚拟机共享目录内的文件名
     # 假设虚拟机共享目录为www,该项目在www目录内的app,修改如下:
     APP_PATH=www/app
@@ -59,17 +62,13 @@
 
     # mysql配置
     MYSQL_ROOT_PASSWORD=root        //密码
-    MYSQL_CONTAINER_NAME=app_db     //mysql容器名称
     MYSQL_PORTS=3306                //暴露端口
 
     # REDIS 配置
     REDIS_CONTAINER_NAME=app_redis  //redis容器名称
     REDIS_PORTS=6379                //暴露端口
 
-    # PHP 配置
-    PHP_CONTAINER_NAME=app_php      //php容器名称
     # NGINX 配置
-    NGINX_CONTAINER_NAME=app_nginx  //nginx容器名称
     NGINX_PORTS=80                  //指定nginx暴露的80端口
     NGINX_SSL_PORTS=443             //指定nginx暴露的443端口
     NGINX_SUPERVISOR_PORTS=8080     //指定nginx暴露的8080端口，用于查看supervisor的管理页面
