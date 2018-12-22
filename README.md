@@ -1,4 +1,4 @@
-# docker-laravel
+# laravel-docker
 
 ## 项目说明
 适用本地开发laravel项目的环境
