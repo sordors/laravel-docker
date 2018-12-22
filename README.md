@@ -64,14 +64,34 @@
     MYSQL_ROOT_PASSWORD=root        //密码
     MYSQL_PORTS=3306                //暴露端口
 
-    # REDIS 配置
-    REDIS_CONTAINER_NAME=app_redis  //redis容器名称
+    # REDIS 密码配置
+    # 可在redis/redis.conf下修改requirepass 参数,默认密码为root
+    # REDIS 基础配置
     REDIS_PORTS=6379                //暴露端口
-
+    
     # NGINX 配置
     NGINX_PORTS=80                  //指定nginx暴露的80端口
     NGINX_SSL_PORTS=443             //指定nginx暴露的443端口
     NGINX_SUPERVISOR_PORTS=8080     //指定nginx暴露的8080端口，用于查看supervisor的管理页面
+```
+
+* 配置 laravel .env 文件
+
+```
+    # REDIS 配置
+    REDIS_CLIENT=phpredis
+    REDIS_HOST=redis
+    REDIS_PASSWORD=root
+    REDIS_PORT=6379
+
+    # MYSQL 配置
+    DB_CONNECTION=mysql
+    DB_HOST=db
+    DB_PORT=3306
+    DB_DATABASE=xxx   //自行连接mysql创建
+    DB_USERNAME=root
+    DB_PASSWORD=root
+
 ```
 
 * 启动
@@ -91,3 +111,4 @@
 ```
     docker-compose down
 ```
+
