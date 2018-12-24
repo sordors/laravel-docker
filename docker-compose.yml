@@ -31,9 +31,6 @@ services:
       build:
         context: ./php
         dockerfile: Dockerfile
-      depends_on:
-        - redis
-        - db
       volumes:
         - /${APP_PATH}/www/${APP_CODE_PATH}:/www
         - /${APP_PATH}/supervisor/conf.d:/etc/supervisor/conf.d
