@@ -3,14 +3,14 @@
         "account": {
             "root": {
                 "user": "root",
-                "password": "Gxj1994+-"
+                "password": "root"
             }
         },
         "serverInfo": {
             "shop_data": {
                 "write": {
                     "host": [
-                        "47.97.170.153"
+                        "127.0.0.1"
                     ],
                     "port": 3306,
                     "timeout": 0.5,
@@ -18,7 +18,7 @@
                 },
                 "read": {
                     "host": [
-                        "47.97.170.153"
+                        "127.0.0.1"
                     ],
                     "port": 3306,
                     "timeout": 0.5,
