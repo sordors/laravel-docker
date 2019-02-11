@@ -33,18 +33,32 @@ services:
         dockerfile: Dockerfile
       volumes:
         - /${APP_PATH}/www/${APP_CODE_PATH}:/www
-        - /${APP_PATH}/supervisor/conf.d:/etc/supervisor/conf.d
-        - /${APP_PATH}/supervisor/log:/var/log/supervisor
+        - /${APP_PATH}/php/supervisor/conf.d:/etc/supervisor/conf.d
+        - /${APP_PATH}/php/supervisor/log:/var/log/supervisor
       networks:
         - app-network
       environment:
         - TZ=${TIMEZONE}
+    smproxy:
+      container_name: ${APP_NAME}_smproxy
+      build:
+        context: /docker_share/proxy
+        dockerfile: Dockerfile
+      ports:
+        - "${SMPROXY_PORTS}:3366"
+      volumes:
+        - /docker_share/proxy/smproxy:/www
+        - /docker_share/proxy/supervisor/conf.d:/etc/supervisor/conf.d
+        - /docker_share/proxy/supervisor/log:/var/log/supervisor
+      environment:
+        - TZ=${TIMEZONE}
+      networks:
+        - app-network
     nginx:
       container_name: ${APP_NAME}_nginx
       image: nginx:1.15.7
       ports:
         - "${NGINX_PORTS}:80"
-        - "${NGINX_SSL_PORTS}:443"
         - "${NGINX_SUPERVISOR_PORTS}:8080"
       depends_on:
         - php

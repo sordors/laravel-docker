@@ -1,0 +1,40 @@
+{
+    "database": {
+        "account": {
+            "root": {
+                "user": "root",
+                "password": "Gxj1994+-"
+            }
+        },
+        "serverInfo": {
+            "shop_data": {
+                "write": {
+                    "host": [
+                        "47.97.170.153"
+                    ],
+                    "port": 3306,
+                    "timeout": 0.5,
+                    "account": "root"
+                },
+                "read": {
+                    "host": [
+                        "47.97.170.153"
+                    ],
+                    "port": 3306,
+                    "timeout": 0.5,
+                    "account": "root"
+                }
+            }
+        },
+        "databases": {
+            "shop": {
+                "serverInfo": "shop_data",
+                "startConns": "swoole_cpu_num()*10",
+                "maxSpareConns": "swoole_cpu_num()*10",
+                "maxSpareExp": 3600,
+                "maxConns": "swoole_cpu_num()*20",
+                "charset": "utf8mb4"
+            }
+        }
+    }
+}
