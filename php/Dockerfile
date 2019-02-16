@@ -1,4 +1,4 @@
-FROM php:7.1.24-fpm
+FROM php:7.3.2-fpm
 
 MAINTAINER 960905282@qq.com
 

@@ -42,14 +42,14 @@ services:
     smproxy:
       container_name: ${APP_NAME}_smproxy
       build:
-        context: /docker_share/proxy
+        context: ./proxy
         dockerfile: Dockerfile
       ports:
         - "${SMPROXY_PORTS}:3366"
       volumes:
-        - /docker_share/proxy/smproxy:/www
-        - /docker_share/proxy/supervisor/conf.d:/etc/supervisor/conf.d
-        - /docker_share/proxy/supervisor/log:/var/log/supervisor
+        - /${APP_PATH}/proxy/smproxy:/www
+        - /${APP_PATH}/proxy/supervisor/conf.d:/etc/supervisor/conf.d
+        - /${APP_PATH}/proxy/supervisor/log:/var/log/supervisor
       environment:
         - TZ=${TIMEZONE}
       networks:
@@ -59,7 +59,6 @@ services:
       image: nginx:1.15.7
       ports:
         - "${NGINX_PORTS}:80"
-        - "${NGINX_SUPERVISOR_PORTS}:8080"
       depends_on:
         - php
       volumes:
