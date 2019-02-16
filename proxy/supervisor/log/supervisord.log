@@ -92,3 +92,73 @@
 2019-02-11 16:58:10,904 INFO spawned: 'smproxy_00' with pid 27
 2019-02-11 16:58:11,014 INFO exited: smproxy_00 (exit status 0; not expected)
 2019-02-11 16:58:12,017 INFO gave up: smproxy_00 entered FATAL state, too many start retries too quickly
+2019-02-16 16:33:06,199 CRIT Supervisor running as root (no user in config file)
+2019-02-16 16:33:06,200 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2019-02-16 16:33:06,537 INFO RPC interface 'supervisor' initialized
+2019-02-16 16:33:06,537 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-02-16 16:33:06,538 INFO supervisord started with pid 1
+2019-02-16 16:33:07,542 INFO spawned: 'smproxy_00' with pid 8
+2019-02-16 16:33:07,763 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:33:08,035 INFO reaped unknown pid 12
+2019-02-16 16:33:09,039 INFO spawned: 'smproxy_00' with pid 19
+2019-02-16 16:33:09,178 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:33:09,417 INFO reaped unknown pid 23
+2019-02-16 16:33:11,423 INFO spawned: 'smproxy_00' with pid 30
+2019-02-16 16:33:11,560 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:33:11,823 INFO reaped unknown pid 34
+2019-02-16 16:33:14,829 INFO spawned: 'smproxy_00' with pid 41
+2019-02-16 16:33:14,977 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:33:15,221 INFO gave up: smproxy_00 entered FATAL state, too many start retries too quickly
+2019-02-16 16:33:15,221 INFO reaped unknown pid 45
+2019-02-16 16:39:16,491 WARN received SIGTERM indicating exit request
+2019-02-16 16:40:21,007 CRIT Supervisor running as root (no user in config file)
+2019-02-16 16:40:21,008 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2019-02-16 16:40:21,041 INFO RPC interface 'supervisor' initialized
+2019-02-16 16:40:21,042 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-02-16 16:40:21,042 INFO supervisord started with pid 1
+2019-02-16 16:40:22,050 INFO spawned: 'smproxy_00' with pid 8
+2019-02-16 16:40:22,113 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:40:22,372 INFO reaped unknown pid 12
+2019-02-16 16:40:23,376 INFO spawned: 'smproxy_00' with pid 19
+2019-02-16 16:40:23,500 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:40:23,739 INFO reaped unknown pid 23
+2019-02-16 16:40:25,746 INFO spawned: 'smproxy_00' with pid 30
+2019-02-16 16:40:25,881 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:40:26,124 INFO reaped unknown pid 34
+2019-02-16 16:40:29,131 INFO spawned: 'smproxy_00' with pid 41
+2019-02-16 16:40:29,240 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-16 16:40:29,477 INFO gave up: smproxy_00 entered FATAL state, too many start retries too quickly
+2019-02-16 16:40:29,478 INFO reaped unknown pid 45
+2019-02-17 00:17:26,789 CRIT Supervisor running as root (no user in config file)
+2019-02-17 00:17:26,795 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2019-02-17 00:17:27,122 INFO RPC interface 'supervisor' initialized
+2019-02-17 00:17:27,124 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-02-17 00:17:27,124 INFO supervisord started with pid 1
+2019-02-17 00:17:28,127 INFO spawned: 'smproxy_00' with pid 8
+2019-02-17 00:17:28,442 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:28,709 INFO reaped unknown pid 12
+2019-02-17 00:17:29,717 INFO spawned: 'smproxy_00' with pid 19
+2019-02-17 00:17:29,864 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:30,104 INFO reaped unknown pid 23
+2019-02-17 00:17:32,110 INFO spawned: 'smproxy_00' with pid 30
+2019-02-17 00:17:32,270 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:32,520 INFO reaped unknown pid 34
+2019-02-17 00:17:33,764 WARN received SIGTERM indicating exit request
+2019-02-17 00:17:43,691 CRIT Supervisor running as root (no user in config file)
+2019-02-17 00:17:43,692 INFO Included extra file "/etc/supervisor/conf.d/supervisord.conf" during parsing
+2019-02-17 00:17:43,730 INFO RPC interface 'supervisor' initialized
+2019-02-17 00:17:43,733 CRIT Server 'unix_http_server' running without any HTTP authentication checking
+2019-02-17 00:17:43,735 INFO supervisord started with pid 1
+2019-02-17 00:17:44,740 INFO spawned: 'smproxy_00' with pid 8
+2019-02-17 00:17:44,842 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:45,089 INFO reaped unknown pid 12
+2019-02-17 00:17:46,093 INFO spawned: 'smproxy_00' with pid 19
+2019-02-17 00:17:46,207 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:46,444 INFO reaped unknown pid 23
+2019-02-17 00:17:48,450 INFO spawned: 'smproxy_00' with pid 30
+2019-02-17 00:17:48,572 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:48,814 INFO reaped unknown pid 34
+2019-02-17 00:17:51,820 INFO spawned: 'smproxy_00' with pid 41
+2019-02-17 00:17:51,907 INFO exited: smproxy_00 (exit status 0; not expected)
+2019-02-17 00:17:52,137 INFO gave up: smproxy_00 entered FATAL state, too many start retries too quickly
+2019-02-17 00:17:52,137 INFO reaped unknown pid 45

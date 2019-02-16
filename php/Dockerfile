@@ -9,9 +9,10 @@ ADD apt-list /opt/
 
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \ 
     && cat /opt/apt-list >/etc/apt/sources.list \ 
-    && apt-get update && apt-get install -y libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
+    && apt-get update && apt-get install -y zip libzip-dev libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
+	&& docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install gd mysqli pdo_mysql zip opcache
 
 
