@@ -7,10 +7,10 @@
             }
         },
         "serverInfo": {
-            "shop_data": {
+            "mysql": {
                 "write": {
                     "host": [
-                        "127.0.0.1"
+                        "db"
                     ],
                     "port": 3306,
                     "timeout": 0.5,
@@ -18,7 +18,7 @@
                 },
                 "read": {
                     "host": [
-                        "127.0.0.1"
+                        "db"
                     ],
                     "port": 3306,
                     "timeout": 0.5,
@@ -27,8 +27,8 @@
             }
         },
         "databases": {
-            "shop": {
-                "serverInfo": "shop_data",
+            "test": {
+                "serverInfo": "mysql",
                 "startConns": "swoole_cpu_num()*10",
                 "maxSpareConns": "swoole_cpu_num()*10",
                 "maxSpareExp": 3600,
