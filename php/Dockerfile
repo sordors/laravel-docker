@@ -1,7 +1,5 @@
 FROM php:7.3.2-fpm
 
-MAINTAINER 960905282@qq.com
-
 #添加阿里云镜像
 ADD apt-list /opt/
 
@@ -11,9 +9,9 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \
     && cat /opt/apt-list >/etc/apt/sources.list \ 
     && apt-get update && apt-get install -y zip libzip-dev libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
     && rm -rf /var/lib/apt/lists/* \
-    && docker-php-ext-configure gd --with-png-dir=/usr --with-jpeg-dir=/usr \
-	&& docker-php-ext-configure zip --with-libzip \
-    && docker-php-ext-install gd mysqli pdo_mysql zip opcache
+    && docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --with-jpeg-dir=/usr \
+    && docker-php-ext-configure zip --with-libzip \
+    && docker-php-ext-install gd mysqli pdo_mysql zip opcache bcmath
 
 
 RUN pecl install redis-4.2.0 \

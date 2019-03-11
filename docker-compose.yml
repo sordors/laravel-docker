@@ -10,6 +10,7 @@ services:
       ports:
         - "${MYSQL_PORTS}:3306"
       volumes:
+        - /${APP_PATH}/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
         - db:/var/lib/mysql
       networks:
         - app-network
