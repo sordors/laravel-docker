@@ -20,5 +20,6 @@ RUN pecl install swoole-4.2.9 \
 
 #创建supervisor为容器启动多进程
 RUN mkdir -p /var/log/supervisor
+WORKDIR /www
 
 CMD ["/usr/bin/supervisord"]

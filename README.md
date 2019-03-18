@@ -51,6 +51,8 @@
 │       └── log                  // 日志
 ├── redis                        //配置
 ├── www                          //代码存放目录
+├── database.json                //smproxy数据库配置
+├── server.json                  //smproxy连接配置
 └── .env.example                //环境配置例子
 ```
 
