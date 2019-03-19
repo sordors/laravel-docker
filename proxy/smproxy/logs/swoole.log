@@ -181,3 +181,27 @@ WARNING: Server is shutdown!
 WARNING: Server is shutdown!
 [2019-02-17 00:17:52 #45.1]	NOTICE	Server is shutdown now.
 WARNING: Server is shutdown!
+[2019-03-19 00:12:00 #12.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:12:00 *16.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:12:01 #23.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:12:01 *27.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:12:04 #34.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:12:04 *38.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:12:08 #45.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:12:08 *49.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:19:39 #12.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:19:39 *16.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:19:40 #23.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:19:40 *27.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:19:43 #34.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:19:43 *38.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!
+[2019-03-19 00:19:46 #45.1]	NOTICE	Server is shutdown now.
+[2019-03-19 00:19:46 *49.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
+WARNING: Server is shutdown!

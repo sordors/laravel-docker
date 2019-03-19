@@ -48,8 +48,6 @@ services:
         - "${SMPROXY_PORTS}:3366"
       volumes:
         - /${APP_PATH}/proxy/smproxy:/www
-        - /${APP_PATH}/database.json:/www/conf/database.json
-        - /${APP_PATH}/server.json:/www/conf/server.json
         - /${APP_PATH}/proxy/supervisor/conf.d:/etc/supervisor/conf.d
         - /${APP_PATH}/proxy/supervisor/log:/var/log/supervisor
       environment:
