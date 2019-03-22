@@ -7,16 +7,16 @@ ADD apt-list /opt/
 
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \ 
     && cat /opt/apt-list >/etc/apt/sources.list \ 
-    && apt-get update && apt-get install -y zip libzip-dev libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
+    && apt-get update && apt-get install -y libzip-dev zip libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --with-jpeg-dir=/usr \
     && docker-php-ext-configure zip --with-libzip \
-    && docker-php-ext-install gd mysqli pdo_mysql zip opcache bcmath
+    && docker-php-ext-install gd mysqli pdo_mysql zip opcache bcmath iconv
 
 
 RUN pecl install redis-4.2.0 \
-    && pecl install swoole-4.2.9 \
-    && docker-php-ext-enable redis swoole
+	&& pecl install mcrypt-1.0.2 \
+    && docker-php-ext-enable redis mcrypt
 
 #创建supervisor为容器启动多进程
 RUN mkdir -p /var/log/supervisor
