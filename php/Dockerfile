@@ -24,6 +24,7 @@ RUN pecl install redis-4.2.0 \
 RUN mkdir -p /var/log/supervisor
 RUN mkdir -p /www
 WORKDIR /www
+RUN chown -R www-data:www-data /www
 #配置定时任务
 
 # 复制配置文件 /var/spool/cron/crontabs/
