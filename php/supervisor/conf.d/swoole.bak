@@ -1,0 +1,11 @@
+#Æô¶¯swoole
+[program:laravel-swoole]
+process_name=%(program_name)s_%(process_num)02d
+command=/usr/local/bin/php /www/bin/laravels start -i
+numprocs=1
+autostart=true
+autorestart=true
+startretries=3
+user=root
+redirect_stderr=true
+stdout_logfile=/var/log/supervisor/laravel-swoole.log
