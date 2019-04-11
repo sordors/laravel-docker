@@ -205,3 +205,7 @@ WARNING: Server is shutdown!
 [2019-03-19 00:19:46 #45.1]	NOTICE	Server is shutdown now.
 [2019-03-19 00:19:46 *49.0]	NOTICE	swFactoryProcess_finish (ERROR 1004): send 41 byte failed, because connection[fd=20] is closed.
 WARNING: Server is shutdown!
+Worker started!
+Worker started!
+Worker started!
+Worker started!
