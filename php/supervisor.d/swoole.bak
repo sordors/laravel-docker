@@ -1,4 +1,4 @@
-#Æô¶¯swoole
+#swoole
 [program:laravel-swoole]
 process_name=%(program_name)s_%(process_num)02d
 command=/usr/local/bin/php /www/bin/laravels start -i

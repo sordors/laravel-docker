@@ -5,19 +5,17 @@
 
 ## 环境说明
 
-* mysql     8.0.13
-* php-fpm   7.3.2
-* redis     5.0.3
-* nginx     1.15.7
+* mysql     8.0
+* php-fpm   7.3
+* redis     5.0
+* nginx     1.17
 * supervisor
-* smproxy
 
 ## 基本要求
 1. 掌握supervisor的配置
 2. 掌握redis配置
 3. 掌握mysql的配置
 4. 掌握nginx的配置
-5. 掌握smproxy的使用方法 [仓库](https://github.com/louislivi/smproxy)和[教程](https://smproxy.gitee.louislivi.com/#/)
 5. 掌握docker的使用方法
 6. 安装docker和docker-compose
 
@@ -26,33 +24,18 @@
 ```
 ├── Readme.md                    // help
 ├── www                          // 存放应用的目录
+├── log                          // 日志
 ├── nginx                        
 │   ├── conf.d                   // 配置
-│   ├── log                      // 日志
 │   └──nginx.conf                // 配置
 ├── php
 │   ├── conf.d                   // php环境配置
 │   ├── apt-list                 // 镜像加速配置
 │   ├── crontab                  // 定时调度配置
 │   ├── Dockerfile               // dockerfile
-│   └──supervisor
-│       ├── conf.d               // 启动配置
-│       └── log                  // 日志
-├── proxy
-│   ├── smproxy                  // 连接池项目
-│   │   ├── conf                 // 数据库配置 
-│   │   ├── logs                 // 日志
-│   │   └── SMProxy              // 项目包 
-│   ├── apt-list                 // 镜像加速配置
-│   ├── crontab                  // 定时调度配置
-│   ├── Dockerfile               // dockerfile
-│   └──supervisor
-│       ├── conf.d               // 启动配置
-│       └── log                  // 日志
+│   └── supervisor.d             //配置
 ├── redis                        //配置
 ├── www                          //代码存放目录
-├── database.json                //smproxy数据库配置
-├── server.json                  //smproxy连接配置
 └── .env.example                //环境配置例子
 ```
 
@@ -90,14 +73,6 @@
     # NGINX 配置
     NGINX_PORTS=8080                  //指定nginx暴露的8080端口
 ```
-* 连接池配置
-
-```
-    配置文件在proxy/smproxy/conf中
-    其中database.json 配置的是mysql的数据库
-    sever.json 配置的是 连接池 连接的用户和密码
-    具体请查看smproxy的文档说明
-```
 
 * 配置 laravel .env 文件
 
@@ -114,14 +89,6 @@
     DB_PORT=3306
     DB_DATABASE=xxx   //自行连接mysql创建
     DB_USERNAME=root
-    DB_PASSWORD=root
-
-    # 使用连接池配置
-    DB_CONNECTION=mysql
-    DB_HOST=smproxy
-    DB_PORT=3366
-    DB_DATABASE=xxx   //自行连接mysql创建
-    DB_USERNAME=root  //此处账户密码在proxy/smproxy/conf/sever.json配置
     DB_PASSWORD=root
 
 ```
