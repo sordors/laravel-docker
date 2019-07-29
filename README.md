@@ -38,6 +38,18 @@
 ├── www                          //代码存放目录
 └── .env.example                //环境配置例子
 ```
+## 修改镜像源
+```
+    vi /etc/docker/daemon.json
+	文件中加入：
+	{
+		"registry-mirrors":["https://docker.mirrors.ustc.edu.cn"]
+	}
+	然后重启守护进程
+	systemctl daemon-reload
+	systemctl restart docker
+```
+
 
 ## 使用方法
 * 复制.env.example 文件为 .env 文件

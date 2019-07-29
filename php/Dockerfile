@@ -1,14 +1,13 @@
-ARG APT_LIST=${APT_LIST}
-
 FROM php:7.3.2-fpm
 
-#添加镜像源
-ADD ${APT_LIST} /opt/
+ARG APT_LIST
 
+#添加镜像源
+ADD $APT_LIST /opt/
 # 安装扩展包
 
 RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \ 
-    && cat /opt/${APT_LIST} >/etc/apt/sources.list \ 
+    && cat /opt/$APT_LIST >/etc/apt/sources.list \ 
     && apt-get update && apt-get install -y libzip-dev zip libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev cron supervisor \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-freetype-dir=/usr --with-png-dir=/usr --with-jpeg-dir=/usr \

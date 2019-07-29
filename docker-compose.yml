@@ -31,7 +31,7 @@ services:
       build:
         context: ./php
         dockerfile: Dockerfile
-      args:
+        args:
           - APT_LIST=${APT_LIST}
       volumes:
         - /${APP_PATH}/www/${APP_CODE_PATH}:/www
