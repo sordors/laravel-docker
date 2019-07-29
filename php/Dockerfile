@@ -18,8 +18,7 @@ RUN cp /etc/apt/sources.list /etc/apt/sources.list.bak \
 RUN pecl install redis-4.2.0 \
     && pecl install mcrypt-1.0.2 \
     && pecl install swoole-4.2.9 \
-    && pecl install inotify-2.0.0 \
-    && docker-php-ext-enable redis swoole inotify mcrypt
+    && docker-php-ext-enable redis swoole mcrypt
 
 #其他基础命令
 RUN mkdir -p /var/log/supervisor\
